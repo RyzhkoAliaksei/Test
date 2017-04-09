@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd"> 
+<tiles-definitions>
+
+	<definition name="base.definition" template="/WEB-INF/tiles-base/layout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/tiles-base/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/tiles-base/menu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/tiles-base/footer.jsp" />
+    </definition>
+ 
+ 	 <definition name="access-denied" template="/WEB-INF/views/denied.jsp"/>
+ 	 <definition name="error" template="/WEB-INF/views/error.jsp"/>
+
+<definition name="error" extends="base.definition">
+        <put-attribute name="title" value="Error" />
+        <put-attribute name="body" value="/WEB-INF/views/error.jsp" />
+    </definition>
+ 	<definition name="login" extends="base.definition">
+        <put-attribute name="title" value="Utilities - Sign In" />
+        <put-attribute name="body" value="/WEB-INF/views/user/login.jsp" />
+    </definition>
+     <definition name="register" extends="base.definition">
+        <put-attribute name="title" value="Client registration " />
+        <put-attribute name="body" value="/WEB-INF/views/user/registration.jsp" />
+    </definition>
+     <definition name="profile" extends="base.definition">
+        <put-attribute name="title" value="User Profile" />
+        <put-attribute name="body" value="/WEB-INF/views/user/profile.jsp" />
+    </definition>
+    <definition name="client.list" extends="base.definition">
+    	<put-attribute name="title" value="${user.name}"/>
+        <put-attribute name="body" value="/WEB-INF/views/client/client-list.jsp" />
+    </definition>
+     <definition name="speciality.list" extends="base.definition">
+    	<put-attribute name="title" value="Specialities"/>
+        <put-attribute name="body" value="/WEB-INF/views/speciality/speciality-list.jsp" />
+    </definition>
+    <definition name="speciality.form" extends="base.definition">
+    	<put-attribute name="title" value="Speciality modify"/>
+        <put-attribute name="body" value="/WEB-INF/views/speciality/speciality-form.jsp" />
+    </definition>
+      <definition name="employee.list" extends="base.definition">
+    	<put-attribute name="title" value="Employees"/>
+        <put-attribute name="body" value="/WEB-INF/views/employee/employee-list.jsp" />
+    </definition>
+    <definition name="employee.form" extends="base.definition">
+    	<put-attribute name="title" value="Employee modify"/>
+        <put-attribute name="body" value="/WEB-INF/views/employee/employee-form.jsp" />
+    </definition>
+       <definition name="demand.list" extends="base.definition">
+    	<put-attribute name="title" value="Demands"/>
+        <put-attribute name="body" value="/WEB-INF/views/demand/demand-list.jsp" />
+    </definition>
+    <definition name="demand.form" extends="base.definition">
+    	<put-attribute name="title" value="Demand modify"/>
+        <put-attribute name="body" value="/WEB-INF/views/demand/demand-form.jsp" />
+    </definition>
+     <definition name="task.list" extends="base.definition">
+    	<put-attribute name="title" value="Tasks"/>
+        <put-attribute name="body" value="/WEB-INF/views/task/task-list.jsp" />
+    </definition>
+    <definition name="task.form" extends="base.definition">
+    	<put-attribute name="title" value="Demand modify"/>
+        <put-attribute name="body" value="/WEB-INF/views/task/task-form.jsp" />
+    </definition>
+     <definition name="crew.list" extends="base.definition">
+    	<put-attribute name="title" value="Crews"/>
+        <put-attribute name="body" value="/WEB-INF/views/crew/crew-list.jsp" />
+    </definition>
+    <definition name="crew.form" extends="base.definition">
+    	<put-attribute name="title" value="Crew modify"/>
+        <put-attribute name="body" value="/WEB-INF/views/crew/crew-form.jsp" />
+    </definition>
+    <definition name="crew.employees.list" extends="base.definition">
+    	<put-attribute name="title" value="Employees for crew"/>
+        <put-attribute name="body" value="/WEB-INF/views/crew/crew-employees-list.jsp" />
+    </definition>
+     <definition name="demand.dispatcher.list" extends="base.definition">
+    	<put-attribute name="title" value="Demands list"/>
+        <put-attribute name="body" value="/WEB-INF/views/demand/demand-dispatcher-list.jsp" />
+    </definition>
+    
+      <definition name="demand.form.dispatcher" extends="base.definition">
+    	<put-attribute name="title" value="Choose status"/>
+        <put-attribute name="body" value="/WEB-INF/views/demand/demand-form-for-dispatcher.jsp" />
+    </definition>
+     <definition name="choose.speciality" extends="base.definition">
+    	<put-attribute name="title" value="Choose speciality"/>
+        <put-attribute name="body" value="/WEB-INF/views/employee/choose-speciality.jsp" />
+    </definition>
+     <definition name="speciality.employee.free.list" extends="base.definition">
+    	<put-attribute name="title" value="Choose employee"/>
+        <put-attribute name="body" value="/WEB-INF/views/employee/employee-free-list.jsp" />
+    </definition>
+     <definition name="time.set.form" extends="base.definition">
+    	<put-attribute name="title" value="Set time"/>
+        <put-attribute name="body" value="/WEB-INF/views/demand/time-set-form.jsp" />
+    </definition>
+      <definition name="free.crew.list" extends="base.definition">
+    	<put-attribute name="title" value="Free crews"/>
+        <put-attribute name="body" value="/WEB-INF/views/crew/crew-free-list.jsp" />
+    </definition>
+      <definition name="dispatcher.list" extends="base.definition">
+    	<put-attribute name="title" value="Dispatchers"/>
+        <put-attribute name="body" value="/WEB-INF/views/dispatcher/dispatcher-list.jsp" />
+    </definition>
+      <definition name="dispatcher.form" extends="base.definition">
+    	<put-attribute name="title" value="Save dispatcher"/>
+        <put-attribute name="body" value="/WEB-INF/views/dispatcher/dispatcher-form.jsp" />
+    </definition>
+    <definition name="demand.form.time.dispatcher" extends="base.definition">
+    	<put-attribute name="title" value="Save dispatcher"/>
+        <put-attribute name="body" value="/WEB-INF/views/demand/time-set-form.jsp" />
+    </definition>
+      <definition name="choose.status" extends="base.definition">
+    	<put-attribute name="title" value="Choose status"/>
+        <put-attribute name="body" value="/WEB-INF/views/demand/choose-status.jsp" />
+    </definition>
+     <definition name="choose.surname" extends="base.definition">
+    	<put-attribute name="title" value="Choose surname"/>
+        <put-attribute name="body" value="/WEB-INF/views/demand/choose-surname.jsp" />
+    </definition>
+    
+    
+    
+</tiles-definitions>
